@@ -75,5 +75,5 @@ WeatherNow is a modern, interactive weather application that provides real-time 
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/YOUR_USERNAME/weather-ai-app.git
-cd weather-ai-app
+git clone https://github.com/Hamzakhaliq921/AI_Wheather_App.git
+cd AI_Wheather_App
