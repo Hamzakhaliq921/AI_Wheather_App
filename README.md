@@ -4,6 +4,7 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-green)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0.2-purple)
 ![HTML](https://img.shields.io/badge/HTML-5-orange)
+![CSS](https://img.shields.io/badge/CSS-4-green)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
 ![License](https://img.shields.io/badge/license-MIT-red)
 
