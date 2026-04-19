@@ -158,3 +158,16 @@ async function askAI(userMessage){
     return "Something went wrong.";
   }
 }
+async function sendMessage(){
+
+  const message = chatInput.value.trim();
+  if(message === "") return;
+
+  // Add user message
+  const userDiv = document.createElement("div");
+  userDiv.classList.add("user-message");
+  userDiv.innerText = message;
+  chatBody.appendChild(userDiv);
+
+  chatInput.value = "";
+
