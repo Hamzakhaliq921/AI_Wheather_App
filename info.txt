@@ -1,0 +1,22 @@
+The table should be simple and clean.
+
+City	Temp	Humidity	Wind	Condition	UV	Visibility
+⭐ Best Fields for Table
+
+Use these:
+
+location.name
+
+current.temp_c
+
+current.humidity
+
+current.wind_kph
+
+current.condition.text
+
+current.uv
+
+current.vis_km
+
+current.pressure_mb
