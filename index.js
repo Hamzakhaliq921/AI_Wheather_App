@@ -171,7 +171,7 @@ async function sendMessage(){
 
   chatInput.value = "";
 
-  // 
+  // Bot typing
   const botDiv = document.createElement("div");
   botDiv.classList.add("bot-message");
   botDiv.innerText = "Typing...";
@@ -184,3 +184,26 @@ async function sendMessage(){
   botDiv.innerText = reply;
 }
 
+const themeBtn = document.getElementById("themeBtn");
+
+function toggleTheme(){
+  document.body.classList.toggle("dark");
+
+  if(document.body.classList.contains("dark")){
+    themeBtn.textContent = "☀️";
+    localStorage.setItem("theme","dark");
+  } else {
+    themeBtn.textContent = "🌙";
+    localStorage.setItem("theme","light");
+  }
+}
+
+if(localStorage.getItem("theme") === "dark"){
+  document.body.classList.add("dark");
+  themeBtn.textContent = "☀️";
+}
+
+function updateMap(lat, lon){
+  document.getElementById("weatherMapFrame").src =
+    `https://maps.google.com/maps?q=${lat},${lon}&z=12&output=embed&hl=en`;
+}
