@@ -110,3 +110,17 @@ body.dark td {
 .gray{
   background-color: #0d6efd;
 }
+/* map  */
+.weather-map {
+  padding: 40px;
+}
+
+.weather-map h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#map-container {
+  border-radius: 15px;
+  overflow: hidden;
+}
