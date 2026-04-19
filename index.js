@@ -99,3 +99,62 @@ chatInput.addEventListener("keypress", function(e){
   }
 });
 
+async function askAI(userMessage){
+
+  if(!currentWeatherData){
+    return "Weather data not loaded yet.";
+  }
+
+  const city = currentWeatherData.location.name;
+  const temp = currentWeatherData.current.temp_c;
+  const condition = currentWeatherData.current.condition.text;
+  const humidity = currentWeatherData.current.humidity;
+
+  const systemPrompt = `
+  You are a weather assistant.
+
+  Current weather in ${city}:
+  Temperature: ${temp} °C
+  Condition: ${condition}
+  Humidity: ${humidity} %
+
+  Note:
+1. mention it's hot,cold,any other or anything based on temperature.
+2. if user ask then Suggest food popular in ${city}.
+4. if user ask then Suggest 3 famous tourist places in ${city}.
+5. Adapt suggestions according to weather.
+  `;
+
+  try {
+
+    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer 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",
+        "Content-Type": "application/json",
+        "HTTP-Referer": window.location.href,
+        "X-OpenRouter-Title": "AI Weather App"
+      },
+      body: JSON.stringify({
+        model: "mistralai/mistral-small-3.2-24b-instruct",
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: userMessage }
+        ]
+      })
+    });
+
+    const data = await response.json();
+
+    if(data.error){
+      console.log(data.error);
+      return "API Error. Check console.";
+    }
+
+    return data.choices[0].message.content;
+
+  } catch(error){
+    console.error(error);
+    return "Something went wrong.";
+  }
+}
