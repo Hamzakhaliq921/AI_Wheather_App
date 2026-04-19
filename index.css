@@ -71,3 +71,42 @@
   margin: 5px 0;
   color: #333;
 }
+body.dark {
+  background-color: black;
+  color: white;
+}
+body.dark .card {
+  background-color: #222;
+  color: white;
+}
+body {
+  transition: 0.3s ease;
+}
+
+/* Theme Button */
+#themeBtn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+body:not(.dark) #themeBtn {
+  background-color: #222;
+  color: white;
+}
+
+body.dark #themeBtn {
+  background-color: #ffffff;
+  color: black;
+}
+body.dark table,
+body.dark th,
+body.dark td {
+  border: 1px solid #555;
+  color: white;   
+}
+.gray{
+  background-color: #0d6efd;
+}
