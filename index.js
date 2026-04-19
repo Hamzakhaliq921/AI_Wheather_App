@@ -85,3 +85,8 @@ chatToggle.addEventListener("click", () => {
   chatBox.style.display = "flex";
 });
 
+// Close chat
+closeChat.addEventListener("click", () => {
+  chatBox.style.display = "none";
+});
+
