@@ -80,4 +80,8 @@ const sendMsg = document.getElementById("sendMsg");
 const chatInput = document.getElementById("chatInput");
 const chatBody = document.getElementById("chatBody");
 
+// Open chat
+chatToggle.addEventListener("click", () => {
+  chatBox.style.display = "flex";
+});
 
