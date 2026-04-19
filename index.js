@@ -90,3 +90,12 @@ closeChat.addEventListener("click", () => {
   chatBox.style.display = "none";
 });
 
+// Send message
+sendMsg.addEventListener("click", sendMessage);
+
+chatInput.addEventListener("keypress", function(e){
+  if(e.key === "Enter"){
+    sendMessage();
+  }
+});
+
