@@ -171,3 +171,16 @@ async function sendMessage(){
 
   chatInput.value = "";
 
+  // 
+  const botDiv = document.createElement("div");
+  botDiv.classList.add("bot-message");
+  botDiv.innerText = "Typing...";
+  chatBody.appendChild(botDiv);
+
+  chatBody.scrollTop = chatBody.scrollHeight;
+
+  const reply = await askAI(message);
+
+  botDiv.innerText = reply;
+}
+
