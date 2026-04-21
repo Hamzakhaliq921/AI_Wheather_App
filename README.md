@@ -35,7 +35,7 @@
 <br>
 <img width="266" height="341" alt="image" src="https://github.com/user-attachments/assets/3bcf4863-54c0-413f-9d0d-864bb6cafc53" />
 <br>
-## 📌 Overview
+📌 Overview
 
 WeatherNow is a modern, interactive weather application that provides real-time weather data, AI-powered chatbot assistance, and interactive maps. Built with HTML5, CSS3, JavaScript, and Bootstrap 5, this app fetches live weather data from WeatherAPI and integrates OpenRouter AI for intelligent weather conversations.
 
