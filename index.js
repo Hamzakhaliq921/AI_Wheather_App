@@ -130,7 +130,7 @@ async function askAI(userMessage){
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer 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",
+        "Authorization": "Bearer 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",
         "Content-Type": "application/json",
         "HTTP-Referer": window.location.href,
         "X-OpenRouter-Title": "AI Weather App"
